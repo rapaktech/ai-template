@@ -1,0 +1,40 @@
+{
+  "name": "smart-brevity-ai",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.11",
+    "@headlessui/tailwindcss": "^0.1.2",
+    "@heroicons/react": "^2.0.16",
+    "@next/font": "^13.1.7-canary.21",
+    "@tailwindcss/forms": "^0.5.3",
+    "@types/node": "18.11.18",
+    "@types/react": "18.0.26",
+    "@types/react-dom": "18.0.10",
+    "axios": "^1.2.2",
+    "clsx": "^1.2.1",
+    "eslint": "8.31.0",
+    "eventsource-parser": "^0.1.0",
+    "next": "^13.1.7-canary.21",
+    "openai": "^3.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-markdown": "^8.0.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/jsdom": "^20.0.1",
+    "autoprefixer": "^10.4.13",
+    "eslint-config-next": "^13.1.7-canary.21",
+    "eslint-config-prettier": "^8.6.0",
+    "postcss": "^8.4.21",
+    "tailwindcss": "^3.2.4",
+    "typescript": "4.9.4"
+  }
+}
