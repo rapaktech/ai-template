@@ -72,11 +72,6 @@
   dependencies:
     glob "7.1.7"
 
-"@next/font@^13.1.7-canary.21":
-  version "13.1.7-canary.23"
-  resolved "https://registry.yarnpkg.com/@next/font/-/font-13.1.7-canary.23.tgz#07f10f6dfdd2978cab7fdcd2db22746b9c3e746c"
-  integrity sha512-y5pZjah3b5n2X1yMMAImPwAMi2hFY6Maip76R6+VzLjak+pNMB5jF72ieZoRsibGxt+efCoWOWIkh5s7ZO8YrA==
-
 "@next/swc-android-arm-eabi@13.1.7-canary.23":
   version "13.1.7-canary.23"
   resolved "https://registry.yarnpkg.com/@next/swc-android-arm-eabi/-/swc-android-arm-eabi-13.1.7-canary.23.tgz#1d7d69803d2fa3910de4055da6c1cd8d6b3d4ef0"

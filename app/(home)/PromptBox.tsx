@@ -6,15 +6,12 @@ import { Loader } from "@internal/ui/Loader";
 import { LoadingQuotes } from "@internal/ui/LoadingQuotes";
 import { Markdown } from "@internal/ui/Markdown";
 import { useState } from "react";
-import DropDown from "@internal/ui/DropDown";
-
-export const VibeTypes = ["Sarcastic", "Dark", "Edgy", "Dry"];
+import { BUTTON_LABEL, INPUT_LABEL } from "@internal/app/(home)/page";
 
 export const PromptBox = () => {
   const [userInput, setUserInput] = useState("");
   const [apiOutput, setApiOutput] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
-  const [vibe, setVibe] = useState(VibeTypes[0]);
 
   const onUserChangedText = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     setUserInput(event.target.value);
@@ -31,7 +28,6 @@ export const PromptBox = () => {
       },
       body: JSON.stringify({
         userInput,
-        vibe,
       }),
     });
 
@@ -63,14 +59,9 @@ export const PromptBox = () => {
       <Input
         className="text-left"
         id="url"
-        label="Enter a topic for a joke"
+        label={INPUT_LABEL}
         onChange={onUserChangedText}
-        placeholder="A rabbit dancing on the moon"
-      />
-      <DropDown
-        vibes={VibeTypes}
-        vibe={vibe}
-        setVibe={(newVibe) => setVibe(newVibe)}
+        placeholder="a startup company that is failing"
       />
 
       <div className="grid justify-center pb-6">
@@ -84,7 +75,7 @@ export const PromptBox = () => {
               <Loader />
             </span>
           ) : (
-            "Make me laugh ✨"
+            BUTTON_LABEL
           )}
         </Button>
       </div>

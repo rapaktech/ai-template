@@ -8,17 +8,23 @@ import clsx from "clsx";
 import { Fragment } from "react";
 
 interface DropDownProps {
+  label: string;
   vibes: string[];
   vibe: string;
   setVibe: (vibe: string) => void;
 }
 
-export default function DropDown({ vibes, vibe, setVibe }: DropDownProps) {
+export default function DropDown({
+  label,
+  vibes,
+  vibe,
+  setVibe,
+}: DropDownProps) {
   return (
     <Menu as="div" className="relative block text-left w-full">
       <div>
         <label className="block text-sm font-medium text-gray-900 pb-1">
-          Select the vibe for your joke
+          {label}
         </label>
 
         <Menu.Button className="inline-flex w-full justify-between items-center rounded-md border border-gray-300 bg-white px-4 py-2 text-gray-700 shadow-lg hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-black">
