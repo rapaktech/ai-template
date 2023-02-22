@@ -1,28 +1,45 @@
-# [TwitterBio.com](https://www.twitterbio.com/)
+# AI Joke Teller
 
-This project generates Twitter bios for you using AI.
+This project is a fun experiment that uses OpenAI's language model to generate jokes. The project is built using Node.js and can be run on your local machine with the `yarn dev` command.
 
-[![Twitter Bio Generator](./public/screenshot.png)](https://www.twitterbio.com)
+## Installation
 
-## How it works
+1. Clone the repository to your local machine.
+2. Install the required dependencies by running `yarn install`.
 
-This project uses the [OpenAI GPT-3 API](https://openai.com/api/) (specifically, text-davinci-003) and [Vercel Edge functions](https://vercel.com/features/edge-functions) with streaming. It constructs a prompt based on the form and user input, sends it to the GPT-3 API via a Vercel Edge function, then streams the response back to the application.
+## Configuration
 
-Video and blog post coming soon on how to build apps with OpenAI and Vercel Edge functions!
+To use the OpenAI language model, you will need to set your OpenAI API key as an environment variable named `OPENAI_API_KEY`.
 
-## Running Locally
+You can obtain your API key from the [OpenAI website](https://beta.openai.com/docs/api-reference/authentication).
 
-After cloning the repo, go to [OpenAI](https://beta.openai.com/account/api-keys) to make an account and put your API key in a file called `.env`.
+To set the environment variable, you can create a `.env` file in the root directory of the project with the following content:
 
-Then, run the application in the command line and it will be available at `http://localhost:3000`.
 
-```bash
-npm run dev
+```
+OPENAI_API_KEY=your_api_key_here
 ```
 
-## One-Click Deploy
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=vercel-examples):
+Replace `your_api_key_here` with your actual API key.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Nutlope/twitterbio&env=OPENAI_API_KEY&project-name=twitter-bio-generator&repo-name=twitterbio)
-# ai-joker
+## Usage
+
+Once you have set your API key as an environment variable, you can run the project using the following command:
+
+```
+yarn dev
+```
+
+This will start the Node.js server and make the joke-telling endpoint available at `http://localhost:3000/joke`.
+
+To get a joke, you can send a GET request to this endpoint using your favorite tool for sending HTTP requests (e.g., `curl`, Postman, etc.).
+
+## Contributing
+
+If you want to contribute to this project, please fork the repository and create a new branch for your changes. Once you have made your changes, submit a pull request and I will review your code as soon as possible.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
