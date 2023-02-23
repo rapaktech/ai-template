@@ -18,7 +18,7 @@ export async function POST(req: Request): Promise<Response> {
     return new Response("No input in the request", { status: 400 });
   }
 
-  const prompt = BASE_PROMPT_PREFIX + userInput + ". ";
+  const prompt = BASE_PROMPT_PREFIX + userInput;
 
   const payload: OpenAIStreamPayload = {
     model: "text-davinci-003",
