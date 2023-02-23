@@ -1,5 +1,5 @@
 import { OpenAIStream, OpenAIStreamPayload } from "../../../lib/OpenAIStream";
-import { BASE_PROMPT_PREFIX } from "@internal/app/(home)/page";
+import { BASE_PROMPT_PREFIX } from "@internal/content";
 
 if (!process.env.OPENAI_API_KEY) {
   throw new Error("Missing env var from OpenAI");

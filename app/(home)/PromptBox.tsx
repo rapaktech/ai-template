@@ -6,7 +6,7 @@ import { Loader } from "@internal/ui/Loader";
 import { LoadingQuotes } from "@internal/ui/LoadingQuotes";
 import { Markdown } from "@internal/ui/Markdown";
 import { useState } from "react";
-import { BUTTON_LABEL, INPUT_LABEL } from "@internal/app/(home)/page";
+import { BUTTON_LABEL, INPUT_LABEL } from "@internal/content";
 
 export const PromptBox = () => {
   const [userInput, setUserInput] = useState("");
