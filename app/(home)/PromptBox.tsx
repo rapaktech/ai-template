@@ -30,10 +30,6 @@ export const PromptBox = () => {
       }),
     });
 
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
-
     const data = response.body;
     if (!data) {
       return;

@@ -1,10 +1,6 @@
 import { OpenAIStream, OpenAIStreamPayload } from "../../../lib/OpenAIStream";
 import { BASE_PROMPT_PREFIX } from "@internal/content";
 
-if (!process.env.OPENAI_API_KEY) {
-  throw new Error("Missing env var from OpenAI");
-}
-
 export const config = {
   runtime: "edge",
 };
@@ -13,6 +9,10 @@ export async function POST(req: Request): Promise<Response> {
   const { userInput } = (await req.json()) as {
     userInput?: string;
   };
+
+  if (!process.env.OPENAI_API_KEY) {
+    return new Response("Missing env var from OpenAI", { status: 400 });
+  }
 
   if (!userInput) {
     return new Response("No input in the request", { status: 400 });
